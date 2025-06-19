@@ -1,0 +1,436 @@
+/* For the Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Light Theme (default) */
+body {
+  background-color: #fff;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-theme header,
+.dark-theme #home,
+.dark-theme #skills,
+.dark-theme #projects,
+.dark-theme #welcome-section,
+.dark-theme #about,
+.dark-theme .footer {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+.dark-theme .btn {
+  background-color: #aa4343;
+  color: #fff;
+}
+
+.dark-theme .btn:hover {
+  background-color: hsl(0, 38%, 9%);
+}
+
+/* === Dark Theme Adjustments === */
+
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Ensure these sections also use white text */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p,
+body.dark-theme a,
+body.dark-theme .btn,
+body.dark-theme label,
+body.dark-theme li {
+  color: #ffffff !important;
+}
+
+
+/* Optional: For inputs and textarea borders/backgrounds in dark mode */
+body.dark-theme input,
+body.dark-theme textarea {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #444;
+
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+body.dark-theme .project-tile {
+  background: #2c2c2c;
+  color: #f1f1f1;
+}
+body.dark-theme .contact  {
+  background-color: #444;
+  color: #f1f1f1;
+}
+
+/* The Navbar Styles */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: #4a4a4a;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6363;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+.btn {
+  display: inline-block;
+  background-color: #853e3e;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #bb5555;
+}
+#home {
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(120deg, #ffc8cf 0%, #3a1c1c 100%);
+      color: #fff;
+      text-align: center;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      padding: 2rem 2.5rem;
+      margin: 2rem auto;
+      max-width: 95%;
+      position: relative;
+      z-index: 1;  
+}
+ .social-links a {
+  color: #555;
+  font-size: 2rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    #home p {
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+   
+    /*skills section */
+#skills {
+      padding: 4rem 2rem;
+      background: #f5f7fa;
+      min-height: 60vh;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .skills ul {
+  list-style: none;
+  padding: 0;
+}
+   .skills li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+.skills i {
+  margin-right: 8px;
+  color: #fdfaff; /* Example: HTML5 icon color */
+}
+    @media (max-width: 700px) {
+      #skills {
+        padding-top: 1rem;
+      }
+      .skills-grid {
+        grid-template-columns: 3fr;
+      }
+    }
+/*skills section */
+#skills {
+      padding: 4rem 2rem;
+      background: #f5f7fa;
+      min-height: 60vh;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1b1b1b;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.skill-item {
+  background-color: #853e3e;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  min-width: 100px;
+  max-width: 180px;
+  text-align: center;
+  margin: 0.3rem 0;
+  word-break: break-word;
+}
+
+.skill-item:hover {
+  background-color: #e55353;
+}
+/*projects section */
+#projects {
+      padding: 6rem 2rem 2rem 2rem;
+      background: #fff;
+      min-height: 60vh;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-tile {
+      background: #f5f7fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .project-tile:hover {
+      transform: translateY(-5px) scale(1.03);
+    }
+    .project-tile img {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    .project-tile a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @media (max-width: 700px) {
+      #welcome-section h1 {
+        font-size: 2rem;
+      }
+      #projects {
+        padding-top: 4rem;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+/* About Section */
+.about {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1 1 500px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* Contact Section */
+.contact {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.contact p {
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff6363;
+  outline: none;
+}
+/* Footer */
+.footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #eee;
+  .social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #555;
+  font-size: 1.4rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff6363;
+}
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
