@@ -25,5 +25,3 @@ Live site: https://emmanuella00.github.io/MyPortfolio/
 
 ---
 
-## 📂 Project Structure
-
